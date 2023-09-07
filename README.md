@@ -5,6 +5,8 @@ Api_toxicity is a Flask-based application that offers multi-label image and text
 ## Table of Contents
 
 - [Features](#features)
+- [Repository Structure](#repository-structure)
+- [Endpoints](#endpoints)
 - [Screenshots](#screenshots)
 - [Installation and Setup](#installation-and-setup)
 - [Usage](#usage)
@@ -12,11 +14,25 @@ Api_toxicity is a Flask-based application that offers multi-label image and text
 - [Contributing](#contributing)
 - [License](#license)
 
-## Features
+## Features:
+- **Text Classification**: Detects toxic sentences.
+- **Image Classification**: Classifies images into categories like drugs, normal, pornographic, and unpleasant visuals.
+- **Flask API**: Provides endpoints to check toxicity in text and images.
 
-1. **Text Classification**: Detects toxic sentences in the provided text.
-2. **Image Classification**: Classifies images into categories such as drugs, normal, pornographic, and unpleasant visuals.
-3. **API Endpoints**: Provides endpoints for checking toxicity in text and classifying images.
+## Repository Structure:
+- `api.py`: Flask API that provides endpoints for checking toxicity in text and images.
+- `image_classif.py`: Contains the image classification model built using ResNet50.
+- `testing_model.py`: Script to test the model's performance.
+- `trp_sample.py`: Sample script to test the text classification model.
+- `Toxicity.h5`: Pre-trained model for text classification.
+- `image_classificationD32.h5` & `image_classificationDR32.h5`: Pre-trained models for image classification.
+- `tokenizer.pickle`: Tokenizer used for text preprocessing.
+- `requirements.txt`: List of required packages to run the project.
+
+## Endpoints:
+- `/`: Main endpoint that renders the main HTML page.
+- `/toxicity_check`: Endpoint to check the toxicity of a given text.
+- `/toxicity_image_text`: Endpoint to check toxicity in both text and images.
 
 ## Screenshots
 
